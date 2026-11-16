@@ -1,0 +1,7 @@
+/.claude
+/.env
+/.env.example
+/.pytest_cache
+/.venv
+comments.db
+comments.csv
