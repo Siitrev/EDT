@@ -1,0 +1,260 @@
+Podczas preprocessingu komentarzy YouTube wykonano:
+- Normalizację Unicode (NFC) oraz dekodowanie encji HTML.
+- Usuwanie niewidocznych znaków (np. \u200b, \ufeff).
+- Zastępowanie adresów URL i oznaczeń użytkowników tokenami url i user.
+- Redukcję nadmiarowej interpunkcji (np. !!!!!! → !!!).
+- Konwersję tekstu na małe litery.
+- Usuwanie nadmiarowych białych znaków, spacji i znaków nowej linii.
+- Usuwanie pustych komentarzy oraz sprawdzanie unikalności identyfikatorów i występowania duplikatów.
+Zachowano polskie znaki, emoji, interpunkcję i stopwordsy, w tym negacje.
+
+C:\Users\mpila\Desktop\edt\EDT>python preprocessor/preprocessing.py
+Wczytano komentarzy: 1023278
+Puste teksty (odrzucone): 491
+Puste comment_id (odrzucone): 0
+Powtarzające się teksty w ramach filmu (pozostawione): 17806
+Komentarzy po czyszczeniu: 1022787
+Średnia liczba słów: 19.75
+Średnia liczba znaków: 124.51
+
+Przykłady czyszczenia:
+  PRZED: Jezu ufam Tobie
+  PO:    jezu ufam tobie
+
+  PRZED: Bardzo się cieszę, iż pan Wojciech przekazuje dalej słowa biskupa Lengi. Mógłby także zwrócić uwagę na ostatnie próby uciszenia biskupa, jakie miały miejsce.
+  PO:    bardzo się cieszę, iż pan wojciech przekazuje dalej słowa biskupa lengi. mógłby także zwrócić uwagę na ostatnie próby uciszenia biskupa, jakie miały miejsce.
+
+  PRZED: Panie Wojtku oraz widzowie tego kanału przyjrzyjcie się się całej działalności Arcybiskupa Pawła Lengi.  W mojej ocenie święty naszych czasów. On nam katolikom wskazuje właściwą drogę... Pozdrawiam 😉
+  PO:    panie wojtku oraz widzowie tego kanału przyjrzyjcie się się całej działalności arcybiskupa pawła lengi. w mojej ocenie święty naszych czasów. on nam katolikom wskazuje właściwą drogę... pozdrawiam 😉
+
+  PRZED: Dziękuję za słowo 🙏
+  PO:    dziękuję za słowo 🙏
+
+  PRZED: Pięknie powiedziane
+  PO:    pięknie powiedziane
+
+Zapisano: C:\Users\mpila\Desktop\edt\EDT\data\comments_clean.csv
+
+Lematyzacja 1022787 komentarzy (model: pl_core_news_sm)...
+  PRZED: jezu ufam tobie
+  PO:    jezu ufać ty
+
+  PRZED: bardzo się cieszę, iż pan wojciech przekazuje dalej słowa biskupa lengi. mógłby także zwrócić uwagę na ostatnie próby uciszenia biskupa, jakie miały miejsce.
+  PO:    bardzo się cieszyć, iż pan wojciech przekazywać daleko słowo biskup lengi. móc by także zwrócić uwaga na ostatni próba uciszeć biskup, jaki mieć miejsce.
+
+  PRZED: panie wojtku oraz widzowie tego kanału przyjrzyjcie się się całej działalności arcybiskupa pawła lengi. w mojej ocenie święty naszych czasów. on nam katolikom wskazuje właściwą drogę... pozdrawiam 😉
+  PO:    pan wojtek oraz widz ten kanał przyjrzyjcie się się cały działalność arcybiskup paweł lengi. w mój ocena święty nasz czas. on my katolik wskazywać właściwy droga... pozdrawiać 😉
+
+  PRZED: dziękuję za słowo 🙏
+  PO:    dziękować za słowo 🙏
+
+  PRZED: pięknie powiedziane
+  PO:    pięknie powiedzieć
+
+Zlematyzowano: 5000/1022787
+Zlematyzowano: 10000/1022787
+Zlematyzowano: 15000/1022787
+Zlematyzowano: 20000/1022787
+Zlematyzowano: 25000/1022787
+Zlematyzowano: 30000/1022787
+Zlematyzowano: 35000/1022787
+Zlematyzowano: 40000/1022787
+Zlematyzowano: 45000/1022787
+Zlematyzowano: 50000/1022787
+Zlematyzowano: 55000/1022787
+Zlematyzowano: 60000/1022787
+Zlematyzowano: 65000/1022787
+Zlematyzowano: 70000/1022787
+Zlematyzowano: 75000/1022787
+Zlematyzowano: 80000/1022787
+Zlematyzowano: 85000/1022787
+Zlematyzowano: 90000/1022787
+Zlematyzowano: 95000/1022787
+Zlematyzowano: 100000/1022787
+Zlematyzowano: 105000/1022787
+Zlematyzowano: 110000/1022787
+Zlematyzowano: 115000/1022787
+Zlematyzowano: 120000/1022787
+Zlematyzowano: 125000/1022787
+Zlematyzowano: 130000/1022787
+Zlematyzowano: 135000/1022787
+Zlematyzowano: 140000/1022787
+Zlematyzowano: 145000/1022787
+Zlematyzowano: 150000/1022787
+Zlematyzowano: 155000/1022787
+Zlematyzowano: 160000/1022787
+Zlematyzowano: 165000/1022787
+Zlematyzowano: 170000/1022787
+Zlematyzowano: 175000/1022787
+Zlematyzowano: 180000/1022787
+Zlematyzowano: 185000/1022787
+Zlematyzowano: 190000/1022787
+Zlematyzowano: 195000/1022787
+Zlematyzowano: 200000/1022787
+Zlematyzowano: 205000/1022787
+Zlematyzowano: 210000/1022787
+Zlematyzowano: 215000/1022787
+Zlematyzowano: 220000/1022787
+Zlematyzowano: 225000/1022787
+Zlematyzowano: 230000/1022787
+Zlematyzowano: 235000/1022787
+Zlematyzowano: 240000/1022787
+Zlematyzowano: 245000/1022787
+Zlematyzowano: 250000/1022787
+Zlematyzowano: 255000/1022787
+Zlematyzowano: 260000/1022787
+Zlematyzowano: 265000/1022787
+Zlematyzowano: 270000/1022787
+Zlematyzowano: 275000/1022787
+Zlematyzowano: 280000/1022787
+Zlematyzowano: 285000/1022787
+Zlematyzowano: 290000/1022787
+Zlematyzowano: 295000/1022787
+Zlematyzowano: 300000/1022787
+Zlematyzowano: 305000/1022787
+Zlematyzowano: 310000/1022787
+Zlematyzowano: 315000/1022787
+Zlematyzowano: 320000/1022787
+Zlematyzowano: 325000/1022787
+Zlematyzowano: 330000/1022787
+Zlematyzowano: 335000/1022787
+Zlematyzowano: 340000/1022787
+Zlematyzowano: 345000/1022787
+Zlematyzowano: 350000/1022787
+Zlematyzowano: 355000/1022787
+Zlematyzowano: 360000/1022787
+Zlematyzowano: 365000/1022787
+Zlematyzowano: 370000/1022787
+Zlematyzowano: 375000/1022787
+Zlematyzowano: 380000/1022787
+Zlematyzowano: 385000/1022787
+Zlematyzowano: 390000/1022787
+Zlematyzowano: 395000/1022787
+Zlematyzowano: 400000/1022787
+Zlematyzowano: 405000/1022787
+Zlematyzowano: 410000/1022787
+Zlematyzowano: 415000/1022787
+Zlematyzowano: 420000/1022787
+Zlematyzowano: 425000/1022787
+Zlematyzowano: 430000/1022787
+Zlematyzowano: 435000/1022787
+Zlematyzowano: 440000/1022787
+Zlematyzowano: 445000/1022787
+Zlematyzowano: 450000/1022787
+Zlematyzowano: 455000/1022787
+Zlematyzowano: 460000/1022787
+Zlematyzowano: 465000/1022787
+Zlematyzowano: 470000/1022787
+Zlematyzowano: 475000/1022787
+Zlematyzowano: 480000/1022787
+Zlematyzowano: 485000/1022787
+Zlematyzowano: 490000/1022787
+Zlematyzowano: 495000/1022787
+Zlematyzowano: 500000/1022787
+Zlematyzowano: 505000/1022787
+Zlematyzowano: 510000/1022787
+Zlematyzowano: 515000/1022787
+Zlematyzowano: 520000/1022787
+Zlematyzowano: 525000/1022787
+Zlematyzowano: 530000/1022787
+Zlematyzowano: 535000/1022787
+Zlematyzowano: 540000/1022787
+Zlematyzowano: 545000/1022787
+Zlematyzowano: 550000/1022787
+Zlematyzowano: 555000/1022787
+Zlematyzowano: 560000/1022787
+Zlematyzowano: 565000/1022787
+Zlematyzowano: 570000/1022787
+Zlematyzowano: 575000/1022787
+Zlematyzowano: 580000/1022787
+Zlematyzowano: 585000/1022787
+Zlematyzowano: 590000/1022787
+Zlematyzowano: 595000/1022787
+Zlematyzowano: 600000/1022787
+Zlematyzowano: 605000/1022787
+Zlematyzowano: 610000/1022787
+Zlematyzowano: 615000/1022787
+Zlematyzowano: 620000/1022787
+Zlematyzowano: 625000/1022787
+Zlematyzowano: 630000/1022787
+Zlematyzowano: 635000/1022787
+Zlematyzowano: 640000/1022787
+Zlematyzowano: 645000/1022787
+Zlematyzowano: 650000/1022787
+Zlematyzowano: 655000/1022787
+Zlematyzowano: 660000/1022787
+Zlematyzowano: 665000/1022787
+Zlematyzowano: 670000/1022787
+Zlematyzowano: 675000/1022787
+Zlematyzowano: 680000/1022787
+Zlematyzowano: 685000/1022787
+Zlematyzowano: 690000/1022787
+Zlematyzowano: 695000/1022787
+Zlematyzowano: 700000/1022787
+Zlematyzowano: 705000/1022787
+Zlematyzowano: 710000/1022787
+Zlematyzowano: 715000/1022787
+Zlematyzowano: 720000/1022787
+Zlematyzowano: 725000/1022787
+Zlematyzowano: 730000/1022787
+Zlematyzowano: 735000/1022787
+Zlematyzowano: 740000/1022787
+Zlematyzowano: 745000/1022787
+Zlematyzowano: 750000/1022787
+Zlematyzowano: 755000/1022787
+Zlematyzowano: 760000/1022787
+Zlematyzowano: 765000/1022787
+Zlematyzowano: 770000/1022787
+Zlematyzowano: 775000/1022787
+Zlematyzowano: 780000/1022787
+Zlematyzowano: 785000/1022787
+Zlematyzowano: 790000/1022787
+Zlematyzowano: 795000/1022787
+Zlematyzowano: 800000/1022787
+Zlematyzowano: 805000/1022787
+Zlematyzowano: 810000/1022787
+Zlematyzowano: 815000/1022787
+Zlematyzowano: 820000/1022787
+Zlematyzowano: 825000/1022787
+Zlematyzowano: 830000/1022787
+Zlematyzowano: 835000/1022787
+Zlematyzowano: 840000/1022787
+Zlematyzowano: 845000/1022787
+Zlematyzowano: 850000/1022787
+Zlematyzowano: 855000/1022787
+Zlematyzowano: 860000/1022787
+Zlematyzowano: 865000/1022787
+Zlematyzowano: 870000/1022787
+Zlematyzowano: 875000/1022787
+Zlematyzowano: 880000/1022787
+Zlematyzowano: 885000/1022787
+Zlematyzowano: 890000/1022787
+Zlematyzowano: 895000/1022787
+Zlematyzowano: 900000/1022787
+Zlematyzowano: 905000/1022787
+Zlematyzowano: 910000/1022787
+Zlematyzowano: 915000/1022787
+Zlematyzowano: 920000/1022787
+Zlematyzowano: 925000/1022787
+Zlematyzowano: 930000/1022787
+Zlematyzowano: 935000/1022787
+Zlematyzowano: 940000/1022787
+Zlematyzowano: 945000/1022787
+Zlematyzowano: 950000/1022787
+Zlematyzowano: 955000/1022787
+Zlematyzowano: 960000/1022787
+Zlematyzowano: 965000/1022787
+Zlematyzowano: 970000/1022787
+Zlematyzowano: 975000/1022787
+Zlematyzowano: 980000/1022787
+Zlematyzowano: 985000/1022787
+Zlematyzowano: 990000/1022787
+Zlematyzowano: 995000/1022787
+Zlematyzowano: 1000000/1022787
+Zlematyzowano: 1005000/1022787
+Zlematyzowano: 1010000/1022787
+Zlematyzowano: 1015000/1022787
+Zlematyzowano: 1020000/1022787
+Zapisano: C:\Users\mpila\Desktop\edt\EDT\data\comments_lemma.csv (1022787 komentarzy)
+
+Oryginalny comments.csv pozostał bez zmian.

@@ -5,3 +5,5 @@
 /.venv
 comments.db
 comments.csv
+comments_clean.csv
+comments_lemma.csv
