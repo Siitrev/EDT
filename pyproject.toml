@@ -1,0 +1,32 @@
+[project]
+name = "edt-monitor-opinii"
+version = "0.1.0"
+description = "Monitor opinii: komentarze YouTube, analiza sentymentu 3 pretrenowanymi modelami i GUI w tkinter"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=3.1",
+    "pyarrow>=26.0",
+    "requests>=2.34",
+    "python-dotenv>=1.2",
+    "tzdata>=2026.6",
+    "spacy>=3.8,<3.9",
+    "torch==2.6.0",
+    "transformers>=5.23,<6",
+    "matplotlib>=3.11",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.2"]
+
+[tool.uv]
+# To jest aplikacja (skrypty uruchamiane przez `uv run python -m ...`), nie biblioteka do instalowania.
+package = false
+
+# PyTorch z obsluga CUDA 12.4 (karty NVIDIA). Na komputerze bez GPU ta wersja tez dziala - liczy na CPU.
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu124", marker = "sys_platform == 'win32' or sys_platform == 'linux'" }]

@@ -165,3 +165,37 @@ CUDA kernel errors might be asynchronously reported at some other API call, so t
 For debugging consider passing CUDA_LAUNCH_BLOCKING=1
 Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
 
+=== proba 1 2026-11-18 15:30:38
+text_clean uzupelniony na biezaco dla 491 komentarzy
+Komentarzy do oceny: 1 023 278
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 33503.76it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 28705.61it/s]
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 1202.10it/s]
+[herbert_twitter/raw] 2 048/768 436 (589 kom./s)
+[herbert_twitter/raw] 4 096/768 436 (698 kom./s)
+[herbert_twitter/raw] 6 144/768 436 (740 kom./s)
+[herbert_twitter/raw] 8 192/768 436 (757 kom./s)
+[herbert_twitter/raw] 10 240/768 436 (779 kom./s)
+[herbert_twitter/raw] 12 288/768 436 (796 kom./s)
+[herbert_twitter/raw] 14 336/768 436 (793 kom./s)
+[herbert_twitter/raw] 16 384/768 436 (793 kom./s)
+[herbert_twitter/raw] 18 432/768 436 (799 kom./s)
+[herbert_twitter/raw] 20 480/768 436 (806 kom./s)
+[transformers] You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[herbert_twitter/raw] 22 528/768 436 (810 kom./s)
+[herbert_twitter/raw] 24 576/768 436 (807 kom./s)
+[herbert_twitter/raw] 26 624/768 436 (797 kom./s)
+[herbert_twitter/raw] 28 672/768 436 (793 kom./s)
+[herbert_twitter/raw] 30 720/768 436 (794 kom./s)
+[herbert_twitter/raw] 32 768/768 436 (791 kom./s)
+[herbert_twitter/raw] 34 816/768 436 (789 kom./s)
+[herbert_twitter/raw] 36 864/768 436 (785 kom./s)
+[herbert_twitter/raw] 38 912/768 436 (781 kom./s)
+[herbert_twitter/raw] 40 960/768 436 (780 kom./s)
+[herbert_twitter/raw] 43 008/768 436 (779 kom./s)
+[herbert_twitter/raw] 45 056/768 436 (781 kom./s)
+[herbert_twitter/raw] 47 104/768 436 (781 kom./s)
+[herbert_twitter/raw] 49 152/768 436 (773 kom./s)
+[herbert_twitter/raw] 51 200/768 436 (771 kom./s)
+[herbert_twitter/raw] 53 248/768 436 (767 kom./s)
