@@ -2,7 +2,8 @@
 name = "edt-monitor-opinii"
 version = "0.1.0"
 description = "Monitor opinii: komentarze YouTube, analiza sentymentu 3 pretrenowanymi modelami i GUI w tkinter"
-requires-python = ">=3.12"
+# torch 2.6.0 ma wheele tylko do Pythona 3.13 - na nowszym uv nie znajdzie pakietu dla platformy
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "pandas>=3.1",
     "pyarrow>=26.0",
