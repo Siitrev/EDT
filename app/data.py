@@ -1,7 +1,3 @@
-"""Warstwa danych GUI: filtrowanie komentarzy, predykcje z pliku lub na zywo, podsumowania.
-
-Czyste funkcje pandas - bez tkintera, zeby dalo sie je testowac osobno.
-"""
 from __future__ import annotations
 
 from pathlib import Path

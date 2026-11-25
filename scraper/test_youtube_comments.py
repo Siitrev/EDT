@@ -1,4 +1,3 @@
-"""Testy scrapera na podstawionym (sztucznym) API - bez sieci i bez klucza."""
 import csv
 import sys
 from pathlib import Path

@@ -1,15 +1,3 @@
-"""Wsadowa predykcja sentymentu dla zebranych komentarzy YouTube.
-
-Uzycie (z katalogu projektu):
-    python -m sentiment.predict                      # wszystkie komentarze, 3 modele x 2 warianty
-    python -m sentiment.predict --per-channel 200    # probka na kanal (szybki test)
-    python -m sentiment.predict --models herbert_twitter --variants raw
-
-Wynik: data/predictions.csv w formacie dlugim
-    comment_id, model, variant, label, p_negative, p_neutral, p_positive
-Skrypt mozna przerwac i uruchomic ponownie - ocenione pary (komentarz, model, wariant)
-sa pomijane.
-"""
 from __future__ import annotations
 
 import argparse

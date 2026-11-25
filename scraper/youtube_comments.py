@@ -1,18 +1,3 @@
-"""Pobieranie komentarzy spod filmow z kanalow YouTube przez YouTube Data API v3.
-
-Uzycie:
-    python scraper/youtube_comments.py @WojciechCejrowski @wideoprezentacje
-    python scraper/youtube_comments.py --export          # tylko eksport do CSV
-
-Klucz API: zmienna YOUTUBE_API_KEY (np. w pliku .env w katalogu projektu).
-
-Dane trafiaja do data/comments.db (SQLite). Skrypt mozna przerwac i uruchomic
-ponownie: filmy juz pobrane sa pomijane. Po wyczerpaniu dziennego limitu API
-(10 000 jednostek) skrypt konczy sie czysto; kolejnego dnia kontynuuje.
-
-Koszt w jednostkach API: channels.list = 1, playlistItems.list = 1 (50 filmow),
-commentThreads.list = 1 (100 watkow), comments.list = 1 (100 odpowiedzi).
-"""
 import argparse
 import csv
 import hashlib

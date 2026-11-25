@@ -1,4 +1,3 @@
-"""Testy warstwy danych GUI (czyste funkcje pandas, bez tkintera i bez modeli)."""
 import pandas as pd
 import pytest
 

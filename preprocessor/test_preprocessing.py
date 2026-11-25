@@ -1,12 +1,3 @@
-"""Testy preprocessingu komentarzy YouTube (pytest).
-
-Testy pracuja na plikach tymczasowych, bez dostepu do prawdziwego data/.
-Lematyzator jest zastepowany sztucznym modelem, wiec testy nie pobieraja spaCy.
-
-Uruchomienie z katalogu glownego repo:
-    python -m pytest preprocessor/test_preprocessing.py -v
-"""
-
 import csv
 import importlib.util
 from pathlib import Path

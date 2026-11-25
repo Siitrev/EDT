@@ -1,12 +1,3 @@
-"""Wspolna nakladka na pretrenowane modele sentymentu z HuggingFace.
-
-Kazdy model zwraca inne etykiety (3 albo 5 klas, rozna wielkosc liter).
-Tu sprowadzamy je do jednego formatu: {"negative": p, "neutral": p, "positive": p}.
-
-Dwa warianty wejscia (VARIANTS):
-    raw   - oryginalny tekst po lekkim czyszczeniu, wielkosc liter zachowana
-    clean - text_clean z preprocessingu (preprocessor/preprocessing.py)
-"""
 from __future__ import annotations
 
 import html

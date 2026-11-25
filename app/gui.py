@@ -1,18 +1,3 @@
-"""Monitor opinii - okienkowa aplikacja tkinter porownujaca modele sentymentu.
-
-Uruchomienie z katalogu projektu:
-    python -m app.gui
-
-Zakladki:
-    Komentarze   - filtr kanalu, wyszukiwarka, lista komentarzy; po wybraniu komentarza
-                   predykcje 3 modeli x 2 warianty tekstu (raw / clean) + wykres
-    Wlasny tekst - dowolne zdanie oceniane na zywo przez wszystkie modele
-    Podsumowanie - rozklad sentymentu per kanal, model i wariant (z data/predictions.csv)
-
-Predykcje sa brane z data/predictions.csv (python -m sentiment.predict); brakujace
-liczone na zywo. Ciezkie operacje (wczytanie ~1 mln komentarzy, ladowanie modeli,
-predykcje) ida w watku roboczym, zeby okno nie zamarzalo.
-"""
 from __future__ import annotations
 
 import queue

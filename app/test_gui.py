@@ -1,4 +1,3 @@
-"""Testy aplikacji tkinter na podstawionych danych i modelach (okno ukryte)."""
 import time
 import tkinter as tk
 
